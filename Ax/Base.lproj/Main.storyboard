@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,201 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-f8-zRx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_QQ_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ilT-Ed-Sf4">
+                                <rect key="frame" x="245" y="20" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="EhI-SN-jQm"/>
+                                    <constraint firstAttribute="height" constant="110" id="av8-jX-Awf"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsX-Uy-4kg">
+                                <rect key="frame" x="135" y="138" width="330" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duZ-dw-AYz">
+                                        <rect key="frame" x="122" y="0.0" width="87" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gxL-vD-RT1"/>
+                                            <constraint firstAttribute="width" constant="87" id="ht4-lG-lpr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Sign up" backgroundImage="login_register_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="login_register_button_click"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cve-fu-S8n">
+                                        <rect key="frame" x="144" y="55" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_left_line" translatesAutoresizingMaskIntoConstraints="NO" id="djW-zm-tac">
+                                        <rect key="frame" x="36" y="65" width="103" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="doz-XP-L6E"/>
+                                            <constraint firstAttribute="width" constant="103" id="zbc-xm-EGx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_right_line" translatesAutoresizingMaskIntoConstraints="NO" id="qQ3-gF-sj9">
+                                        <rect key="frame" x="189" y="65" width="103" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="JnQ-7I-fX8"/>
+                                            <constraint firstAttribute="width" constant="103" id="LHj-jq-g9X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-7s-ILU">
+                                        <rect key="frame" x="224" y="83" width="50" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYt-9T-Ac5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with your acount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivA-2H-zpt">
+                                        <rect key="frame" x="43" y="89" width="173" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="173" id="vBO-ny-zBm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cve-fu-S8n" secondAttribute="trailing" constant="144" id="2Oj-VA-8Tr"/>
+                                    <constraint firstItem="duZ-dw-AYz" firstAttribute="top" secondItem="DsX-Uy-4kg" secondAttribute="top" id="7cY-bn-Wed"/>
+                                    <constraint firstItem="ivA-2H-zpt" firstAttribute="top" secondItem="cve-fu-S8n" secondAttribute="bottom" constant="13" id="Bxh-D8-9C7"/>
+                                    <constraint firstItem="qQ3-gF-sj9" firstAttribute="centerY" secondItem="cve-fu-S8n" secondAttribute="centerY" id="NJQ-6V-yzh"/>
+                                    <constraint firstItem="cve-fu-S8n" firstAttribute="leading" secondItem="DsX-Uy-4kg" secondAttribute="leading" constant="144" id="NjY-X2-Vps"/>
+                                    <constraint firstItem="duZ-dw-AYz" firstAttribute="centerX" secondItem="DsX-Uy-4kg" secondAttribute="centerX" id="OgY-0f-skd"/>
+                                    <constraint firstAttribute="width" constant="330" id="RAM-6H-A2y"/>
+                                    <constraint firstItem="Lw2-7s-ILU" firstAttribute="top" secondItem="qQ3-gF-sj9" secondAttribute="bottom" constant="17" id="U84-8Y-vSQ"/>
+                                    <constraint firstItem="Lw2-7s-ILU" firstAttribute="centerY" secondItem="ivA-2H-zpt" secondAttribute="centerY" id="VfK-5s-dFu"/>
+                                    <constraint firstItem="djW-zm-tac" firstAttribute="centerY" secondItem="cve-fu-S8n" secondAttribute="centerY" id="YHq-BA-fR0"/>
+                                    <constraint firstItem="qQ3-gF-sj9" firstAttribute="leading" secondItem="cve-fu-S8n" secondAttribute="trailing" constant="3" id="Zj4-sU-dg4"/>
+                                    <constraint firstItem="cve-fu-S8n" firstAttribute="leading" secondItem="djW-zm-tac" secondAttribute="trailing" constant="5" id="dg4-i8-dH2"/>
+                                    <constraint firstItem="ivA-2H-zpt" firstAttribute="leading" secondItem="djW-zm-tac" secondAttribute="leading" constant="7" id="j1j-Py-BWJ"/>
+                                    <constraint firstAttribute="height" constant="130" id="nSC-kd-i9w"/>
+                                    <constraint firstItem="Lw2-7s-ILU" firstAttribute="leading" secondItem="ivA-2H-zpt" secondAttribute="trailing" constant="8" id="wsb-X8-gUS"/>
+                                    <constraint firstItem="cve-fu-S8n" firstAttribute="top" secondItem="duZ-dw-AYz" secondAttribute="bottom" constant="15" id="yDo-X6-iSQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-do-obC">
+                                <rect key="frame" x="210" y="1130" width="180" height="160"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="on1-aS-Rqb">
+                                        <rect key="frame" x="20" y="0.0" width="140" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Username" textAlignment="natural" minimumFontSize="17" background="login_rgister_textfield_bg" translatesAutoresizingMaskIntoConstraints="NO" id="sFX-mS-7zq">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="login_rgister_textfield_bg" translatesAutoresizingMaskIntoConstraints="NO" id="vJg-rx-sHf">
+                                                <rect key="frame" x="0.0" y="30" width="140" height="30"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-1q-tgd">
+                                        <rect key="frame" x="20" y="77" width="65" height="30"/>
+                                        <state key="normal" title="Cancel" backgroundImage="login_register_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="login_register_button_click"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backToOriginal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oE5-0W-EDJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY3-s8-Yo1">
+                                        <rect key="frame" x="25" y="122" width="135" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Forget Password ?">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-e3-Pmj">
+                                        <rect key="frame" x="93" y="77" width="67" height="30"/>
+                                        <state key="normal" title="Login" backgroundImage="login_register_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="login_register_button_click"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="7cC-Lh-XPU"/>
+                                    <constraint firstAttribute="width" constant="180" id="Uf3-Sy-vo3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ilT-Ed-Sf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="49b-3b-Fd2"/>
+                            <constraint firstItem="fXa-f8-zRx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JoP-Pp-tMk"/>
+                            <constraint firstItem="N3L-do-obC" firstAttribute="top" secondItem="ilT-Ed-Sf4" secondAttribute="bottom" constant="1000" id="KVB-bu-hbq"/>
+                            <constraint firstItem="fXa-f8-zRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mdn-ET-Kwa"/>
+                            <constraint firstItem="N3L-do-obC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGh-WL-Hus"/>
+                            <constraint firstItem="DsX-Uy-4kg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcm-F9-ukY"/>
+                            <constraint firstItem="ilT-Ed-Sf4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kfV-4s-xQ3"/>
+                            <constraint firstItem="fXa-f8-zRx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="oDj-Tf-wy2"/>
+                            <constraint firstItem="DsX-Uy-4kg" firstAttribute="top" secondItem="ilT-Ed-Sf4" secondAttribute="bottom" constant="8" id="qaX-7x-OEw"/>
+                            <constraint firstItem="fXa-f8-zRx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="v16-Ri-hBA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="frameMargin" destination="qaX-7x-OEw" id="Rva-Ii-hIW"/>
+                        <outlet property="loginMargin" destination="KVB-bu-hbq" id="RnT-2p-SYg"/>
+                        <outlet property="sighupBtn" destination="duZ-dw-AYz" id="Khz-A7-QbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33" y="234"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_QQ_icon" width="70" height="70"/>
+        <image name="login_register_background" width="320" height="568"/>
+        <image name="login_register_button" width="87" height="40"/>
+        <image name="login_register_button_click" width="87" height="40"/>
+        <image name="login_register_left_line" width="103" height="1"/>
+        <image name="login_register_right_line" width="103" height="1"/>
+        <image name="login_rgister_textfield_bg" width="266" height="92"/>
+    </resources>
 </document>
