@@ -7,11 +7,14 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking.h>
+#import "SignUpViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *sighupBtn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *frameMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginMargin;
+@property (retain,nonatomic) AFHTTPSessionManager *afManager;
 
 @end
 
@@ -19,8 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.sighupBtn.layer.cornerRadius = 5;
-//    self.sighupBtn.layer.masksToBounds = YES;
+    self.afManager = [AFHTTPSessionManager manager];
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)goSignIn:(id)sender {
@@ -31,20 +33,32 @@
     }];
 }
 - (IBAction)backToOriginal:(id)sender {
+    [self.view endEditing:YES];
     self.loginMargin.constant = 1000;
     self.frameMargin.constant = 8;
     [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];
     }];
 }
+- (IBAction)Login:(id)sender {
+    [self.afManager GET:@"http://localhost:3000/User" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"progress");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+- (IBAction)goSignUp:(id)sender {
+    SignUpViewController *signUpVC = [[SignUpViewController alloc]init];
+    [self presentViewController:signUpVC animated:YES completion:nil];
+}
+
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
